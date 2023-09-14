@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "db:up": "node src/database/scripts/dbUp.js",
+    "db:down": "node src/database/scripts/dbDown.js",
+    "schema:up": "node src/database/scripts/schemaUp.js",
+    "tables:up": "node src/database/scripts/tablesUp.js",
+    "db:init": "npm run db:up && npm run schema:up && npm run tables:up",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pharmplug/backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pharmplug/backend/issues"
+  },
+  "homepage": "https://github.com/Pharmplug/backend#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv": "^6.3.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "sib-api-v3-sdk": "^8.5.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
+    "validator": "^13.11.0",
+    "winston": "^3.10.0"
+  }
+}
